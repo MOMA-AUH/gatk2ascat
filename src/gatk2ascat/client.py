@@ -3,6 +3,7 @@ import argparse
 from typing import List
 from typing import Optional
 
+from gatk2ascat import __version__
 from gatk2ascat.core import BAF
 from gatk2ascat.core import Segmentation
 
@@ -37,9 +38,14 @@ def write_to_files(ascat_baf_file: str, ascat_logr_file: str, bafs: List[BAF], s
             print(logr_entry, file=logr_file)
 
 
-def main():
+def main(argv: Optional[List[str]] = None) -> None:
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(prog='gatk2ascat')
+    parser.add_argument(
+        '--version',
+        action='version',
+        version=f'%(prog)s {__version__}',
+    )
 
     # Input files
     parser.add_argument('--denoised-copy-ratios', required=True)
@@ -52,7 +58,7 @@ def main():
     parser.add_argument('--ascat-logr-tumor', required=True)
     parser.add_argument('--ascat-logr-normal', required=True)
 
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     tumor_sample_name = sample_name_from_gatk_output(file=args.allelic_counts_tumor)
     normal_sample_name = sample_name_from_gatk_output(file=args.allelic_counts_normal)

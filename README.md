@@ -1,6 +1,6 @@
-[![install with conda](https://anaconda.org/micknudsen/gatk2ascat/badges/version.svg)](https://anaconda.org/micknudsen/gatk2ascat) ![CI](https://github.com/micknudsen/gatk2ascat/workflows/CI/badge.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/micknudsen/gatk2ascat/badge.svg?branch=master)](https://coveralls.io/github/micknudsen/gatk2ascat?branch=master)
-
 # gatk2ascat
+
+[![Conda Version](https://img.shields.io/conda/vn/MOMA-AUH/gatk2ascat?cacheSeconds=300)](https://anaconda.org/MOMA-AUH/gatk2ascat) [![Conda Downloads](https://img.shields.io/conda/dn/MOMA-AUH/gatk2ascat?cacheSeconds=300)](https://anaconda.org/MOMA-AUH/gatk2ascat)
 
 Just a simple tool for converting output from the [GATK Somatic Copy Number Workflow](https://gatk.broadinstitute.org/hc/en-us/articles/360035531092?id=11682) to something which can be used as input for [ASCAT](https://www.crick.ac.uk/research/labs/peter-van-loo/software).
 
@@ -26,6 +26,8 @@ and produces four output files (`Tumor_BAF.txt`, `Germline_BAF.txt`, `Tumor_LogR
 
 ## Install
 
-The simplest way to install `gatk2ascat` is by using conda:
+The recommended way to install **gatk2ascat** is via [conda](https://docs.conda.io/), using the `MOMA-AUH` channel:
 
-```$ conda install -c micknudsen gatk2ascat```
+```bash
+conda install MOMA-AUH::gatk2ascat
+```

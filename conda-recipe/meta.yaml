@@ -1,0 +1,36 @@
+{% set name = "gatk2ascat" %}
+{% set version = "1.0.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  path: ..
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+    - setuptools >=77
+    - wheel
+  run:
+    - python >=3.10
+
+test:
+  imports:
+    - gatk2ascat
+  commands:
+    - gatk2ascat --help
+    - gatk2ascat --version
+
+about:
+  home: https://github.com/MOMA-AUH/gatk2ascat
+  summary: Convert GATK somatic copy-number output to input for ASCAT
+  license: MIT
+  license_file: LICENSE
