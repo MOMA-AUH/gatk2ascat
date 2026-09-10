@@ -1,6 +1,6 @@
 # gatk2ascat
 
-[![Conda Version](https://img.shields.io/conda/vn/MOMA-AUH/gatk2ascat?cacheSeconds=300)](https://anaconda.org/MOMA-AUH/gatk2ascat) [![Conda Downloads](https://img.shields.io/conda/dn/MOMA-AUH/gatk2ascat?cacheSeconds=300)](https://anaconda.org/MOMA-AUH/gatk2ascat)
+[![Conda Version](https://img.shields.io/conda/vn/MOMA-AUH/gatk2ascat?cacheSeconds=300&style=for-the-badge)](https://anaconda.org/MOMA-AUH/gatk2ascat) [![Conda Downloads](https://img.shields.io/conda/dn/MOMA-AUH/gatk2ascat?cacheSeconds=300&style=for-the-badge)](https://anaconda.org/MOMA-AUH/gatk2ascat)
 
 Just a simple tool for converting output from the [GATK Somatic Copy Number Workflow](https://gatk.broadinstitute.org/hc/en-us/articles/360035531092?id=11682) to something which can be used as input for [ASCAT](https://www.crick.ac.uk/research/labs/peter-van-loo/software).
 
